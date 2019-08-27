@@ -20,8 +20,9 @@ function search(query) {
   cache: false,
   success: function (response) {
     console.log(response);
+    var html = new DOMParser().parseFromString(response.result, "text/html").getElementsByTagName('g');
+    console.log(html);
     /*
-    var str = '', html = new DOMParser().parseFromString(response.result, "text/html").getElementsByTagName('table')[0].getElementsByTagName('tr');
     for(var i = 0; i < html.length; i++) {
       data[i] = Object.values(html[i].getElementsByTagName('td'));
     }
@@ -30,10 +31,7 @@ function search(query) {
       data[i] = [data[i][0].textContent, data[i][5].textContent, data[i][12].textContent];
       str += '<option value=' + data[i][0] + '>' + data[i][0] + '</option>';
     }
-    $('#spot').html(str);
-    updateSpot();
-    updateAlt();
-  */
+    */
   }
 });
 }
