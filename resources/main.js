@@ -13,10 +13,9 @@ $(function() {
 
 function search(query) {
   $.ajax({
-  contentType: "application/x-www-form-urlencoded;charset=euc-kr",
+  contentType: "application/x-www-form-urlencoded; charset=UTF-8",
   url:'https://script.google.com/macros/s/AKfycbz3L8IsK35IT2FUNMR8V4KfU2tsNpVWJxwGdOt3Nngz1ANhUac/exec?url=' + encodeURIComponent('https://www.google.com/search?q=' + query + '&tbm=nws') + '&callback=?',
   type: "GET",
-  contentType: "application/x-www-form-urlencoded; charset=UTF-8",
   dataType: 'json',
   cache: false,
   success: function (response) {
