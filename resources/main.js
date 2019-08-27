@@ -20,7 +20,7 @@ function search(query) {
   cache: false,
   success: function (response) {
     console.log(response);
-    var html = new DOMParser().parseFromString(response.result, "text/html").getElementsByTagName('g');
+    var html = new DOMParser().parseFromString(response.result, "text/html").getElementsByClassName('g');
     console.log(html);
     /*
     for(var i = 0; i < html.length; i++) {
