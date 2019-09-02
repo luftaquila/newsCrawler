@@ -16,6 +16,40 @@ body {
   top: 50;
   left : 360;
 }
+.paging { cursor: pointer; }
+
+#pageControl {
+  position: absolute;
+  font-size: 1.05rem;
+  top: 30em;
+  left: 10;
+}
+
+@media (min-width: 760px) {
+  .inputHolder { left: 500; }
+  #pageControl {
+    left: 120;
+    top: 20em;
+  }
+}
+@media (max-width: 759px) {
+  #resultBox {
+    font-size: 0.8rem;
+    width: 350;
+  }
+}
+
+a {
+  color: white;
+  text-underline-position: under;
+}
+
+#resultBox {
+  position: relative;
+  top: 100;
+  left: 30;
+  line-height: 1.5rem;
+}
 
 input {
   color: #1f80aa;
